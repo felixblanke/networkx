@@ -106,7 +106,7 @@ def astar_path(G, source, target, heuristic=None, weight="weight"):
                 path.append(node)
                 node = explored[node]
             path.reverse()
-            return path
+            return path, explored
 
         if curnode in explored:
             # Do not override the parent of starting node
