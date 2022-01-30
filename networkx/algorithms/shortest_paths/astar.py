@@ -100,6 +100,7 @@ def astar_path(G, source, target, heuristic=None, weight="weight"):
         _, __, curnode, dist, parent = pop(queue)
 
         if curnode == target:
+            explored[curnode] = parent
             path = [curnode]
             node = parent
             while node is not None:
